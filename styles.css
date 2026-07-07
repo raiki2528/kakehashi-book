@@ -16,6 +16,9 @@
   --radius: 4px;
   --max-width: 1080px;
   --section-pad: clamp(80px, 10vw, 120px);
+  --hero-photo-position: center 25%;
+  --hero-photo-position-mobile: center 38%;
+  --hero-mobile-height: min(72svh, 620px);
 }
 
 /* ===== Reset & Base ===== */
@@ -203,7 +206,7 @@ strong {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: var(--hero-photo-position);
   filter: brightness(0.86) contrast(1.08) saturate(1.04);
   transform: scale(1.02);
   backface-visibility: hidden;
@@ -343,6 +346,32 @@ strong {
 
 .section-text.center {
   text-align: center;
+}
+
+/* ===== Voices section ===== */
+.voices-section {
+  padding-top: clamp(56px, 10vw, 96px);
+}
+
+.voices-section .section-title {
+  margin-bottom: 0;
+}
+
+.voices-photo {
+  margin: clamp(28px, 5vw, 40px) auto;
+  max-width: 420px;
+}
+
+.voices-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.voices-section .section-text {
+  margin-top: 0;
 }
 
 /* ===== Empathy ===== */
@@ -1357,12 +1386,12 @@ strong {
   }
 
   .hero-with-photo {
-    min-height: 100svh;
-    padding: 100px 0 64px;
+    min-height: var(--hero-mobile-height);
+    padding: 96px 0 48px;
   }
 
   .hero-photo img {
-    object-position: center 20%;
+    object-position: var(--hero-photo-position-mobile);
     transform: none;
   }
 
@@ -1370,9 +1399,14 @@ strong {
     background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.08) 0%,
-      rgba(255, 255, 255, 0.42) 50%,
-      rgba(255, 255, 255, 0.9) 100%
+      rgba(255, 255, 255, 0.42) 40%,
+      #f7f5f2 88%,
+      #f7f5f2 100%
     );
+  }
+
+  .voices-section {
+    padding-top: 48px;
   }
 
   .visual-block,
