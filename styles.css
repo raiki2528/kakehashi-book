@@ -1309,6 +1309,10 @@ strong {
   object-position: center 20%;
 }
 
+.team-photo--miyu img {
+  object-position: center 35%;
+}
+
 .team-photo--eriko img {
   object-position: left 42%;
 }
