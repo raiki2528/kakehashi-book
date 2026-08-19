@@ -1301,6 +1301,14 @@ strong {
   object-position: center 58%;
 }
 
+.team-photo--raiki img {
+  object-position: center 22%;
+}
+
+.team-photo--ayuka img {
+  object-position: center 20%;
+}
+
 .team-photo--eriko img {
   object-position: left 42%;
 }
