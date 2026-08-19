@@ -762,6 +762,49 @@ strong {
 }
 
 /* ===== Extra fees ===== */
+.addon-plans {
+  margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px solid var(--color-border);
+}
+
+.addon-plans-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.addon-plan-card {
+  background: var(--color-white);
+  padding: 32px 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
+}
+
+.addon-plan-card h4 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  margin-bottom: 16px;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.addon-plan-card p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.85;
+}
+
+.addon-plan-note {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--color-border);
+  font-size: 0.88rem;
+}
+
 .extra-fees {
   margin-top: 64px;
   padding-top: 48px;
@@ -1254,6 +1297,14 @@ strong {
   object-position: center 20%;
 }
 
+.team-photo--riki img {
+  object-position: center 58%;
+}
+
+.team-photo--eriko img {
+  object-position: left 42%;
+}
+
 /* ===== QR voice feature ===== */
 .voice-qr-section {
   background: var(--color-bg-dark);
@@ -1350,6 +1401,19 @@ strong {
   color: var(--color-text-muted);
   font-size: 0.75rem;
   border-bottom: 1px solid var(--color-border);
+}
+
+.team-social-link {
+  display: inline-block;
+  color: var(--color-accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-bottom: 1px solid currentColor;
+  transition: color 0.2s;
+}
+
+.team-social-link:hover {
+  color: #7a5c12;
 }
 
 .team-card--coming-soon {
@@ -1853,6 +1917,178 @@ strong {
   .team-section {
     margin-top: 60px;
     padding-top: 52px;
+  }
+}
+
+/* Mobile readability and layout stability */
+@media (max-width: 640px) {
+  .container {
+    padding-left: max(20px, env(safe-area-inset-left, 0px));
+    padding-right: max(20px, env(safe-area-inset-right, 0px));
+  }
+
+  body {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+
+  p,
+  li,
+  summary,
+  .nav a,
+  .btn {
+    font-weight: 500;
+  }
+
+  main,
+  .cards,
+  .team-grid,
+  .visual-block,
+  .visual-block-content {
+    min-width: 0;
+  }
+
+  .logo-text {
+    font-size: 0.94rem;
+    font-weight: 700;
+  }
+
+  .hero-main-title {
+    font-size: clamp(1.75rem, 7.5vw, 2.5rem);
+    font-weight: 700;
+  }
+
+  .page-hero {
+    padding: 56px 0 44px;
+  }
+
+  .page-hero-lead {
+    font-size: 1rem;
+    line-height: 1.9;
+    font-weight: 500;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .section-title {
+    font-size: clamp(1.4rem, 5.8vw, 1.75rem);
+    font-weight: 700;
+  }
+
+  .section-subtitle,
+  .section-subtitle--wrap {
+    font-size: 0.94rem;
+    line-height: 1.8;
+  }
+
+  .section-text,
+  .section-text.center {
+    font-size: 1rem;
+    line-height: 1.9;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  .cards-2,
+  .cards-3,
+  .team-grid,
+  .pricing-cards,
+  .extra-fees-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .card,
+  .team-card,
+  .pricing-card,
+  .extra-fee-item,
+  .addon-plan-card {
+    min-width: 0;
+  }
+
+  .card {
+    padding: 30px 24px;
+  }
+
+  .card p,
+  .empathy-list li,
+  .flow-list p,
+  .pricing-features,
+  .extra-fee-item p,
+  .addon-plan-card p,
+  .faq-item p,
+  .voice-qr-content p,
+  .voice-qr-steps li {
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+
+  .visual-block-content {
+    padding: 48px 20px;
+  }
+
+  .team-card {
+    padding: 28px 20px 26px;
+  }
+
+  .team-card--has-photo {
+    padding-top: 0;
+  }
+
+  .team-role {
+    font-size: 0.84rem;
+  }
+
+  .team-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .team-card > p:not(.team-role) {
+    min-height: 0;
+    font-size: 0.96rem;
+  }
+
+  .team-link-pending {
+    font-size: 0.82rem;
+    font-weight: 500;
+  }
+
+  .team-social-link {
+    font-size: 0.9rem;
+  }
+
+  .flow-step-body p {
+    font-size: 1rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 10px 12px;
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .prose h2,
+  .story-founder h2 {
+    font-size: 1.3rem;
+    line-height: 1.55;
+  }
+
+  .prose p,
+  .story-founder p {
+    font-size: 1rem;
+    line-height: 1.95;
+    font-weight: 500;
+  }
+
+  .footer-nav {
+    gap: 10px 16px;
+  }
+
+  .footer-nav a,
+  .footer-tagline {
+    font-size: 0.92rem;
   }
 }
 
