@@ -1305,6 +1305,10 @@ strong {
   object-position: center 35%;
 }
 
+.team-photo--kodai img {
+  object-position: center 15%;
+}
+
 .team-photo--ayuka img {
   object-position: center 20%;
 }
