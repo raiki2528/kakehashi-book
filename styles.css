@@ -1309,6 +1309,15 @@ strong {
   object-position: center 15%;
 }
 
+.team-photo--yuko {
+  background: var(--color-bg-cream);
+}
+
+.team-photo--yuko img {
+  object-fit: contain;
+  object-position: center center;
+}
+
 .team-photo--ayuka img {
   object-position: center 20%;
 }
