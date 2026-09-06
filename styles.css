@@ -595,6 +595,17 @@ strong {
   margin: 0;
 }
 
+.flow-step-title--stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  line-height: 1.5;
+}
+
+.flow-step-title--stack > span {
+  display: block;
+}
+
 .flow-step-body p {
   font-size: 0.98rem;
   line-height: 2;
@@ -1230,6 +1241,14 @@ strong {
   margin: 0 auto;
 }
 
+.page-hero-lead--follow {
+  margin-top: 0.75em;
+}
+
+.page-hero-lead + .page-hero-lead--follow {
+  margin-top: 0.75em;
+}
+
 /* ===== Prose (story etc.) ===== */
 .prose {
   max-width: 680px;
@@ -1371,6 +1390,18 @@ strong {
   object-position: left 42%;
 }
 
+.team-photo--anzu img {
+  object-position: center 15%;
+}
+
+.team-photo--gaku img {
+  object-position: center 25%;
+}
+
+.team-photo--kanta img {
+  object-position: center 30%;
+}
+
 /* ===== QR voice feature ===== */
 .voice-qr-section {
   background: var(--color-bg-dark);
@@ -1460,6 +1491,31 @@ strong {
   color: var(--color-text-muted);
   font-size: 0.88rem;
   line-height: 1.7;
+}
+
+.team-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+  min-height: 3.2em;
+  margin: 0 20px 16px;
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.team-bio-line {
+  display: block;
+}
+
+.team-bio-line--muted {
+  color: var(--color-text-muted);
+  opacity: 0.55;
+  font-size: 0.82rem;
+}
+
+.team-bio--single {
+  justify-content: flex-start;
 }
 
 .team-link-pending {
@@ -1692,6 +1748,16 @@ strong {
 
 .payment-note p + p {
   margin-top: 0.65em;
+}
+
+.text-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+}
+
+.text-stack > span {
+  display: block;
 }
 
 .faq-more {
@@ -2113,6 +2179,13 @@ strong {
   .team-card > p:not(.team-role) {
     min-height: 0;
     font-size: 0.96rem;
+  }
+
+  .team-bio {
+    min-height: 0;
+    font-size: 0.96rem;
+    line-height: 1.6;
+    gap: 0.4em;
   }
 
   .team-link-pending {
